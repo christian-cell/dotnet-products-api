@@ -1,0 +1,285 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/christian/Escritorio/trabajos/dotnet/microServices/dotnet-products-api/ProductsAPI/ProductsAPI.csproj": {}
+  },
+  "projects": {
+    "/home/christian/Escritorio/trabajos/dotnet/microServices/dotnet-products-api/ProductsAPI/ProductsAPI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/christian/Escritorio/trabajos/dotnet/microServices/dotnet-products-api/ProductsAPI/ProductsAPI.csproj",
+        "projectName": "ProductsAPI",
+        "projectPath": "/home/christian/Escritorio/trabajos/dotnet/microServices/dotnet-products-api/ProductsAPI/ProductsAPI.csproj",
+        "packagesPath": "/home/christian/.nuget/packages/",
+        "outputPath": "/home/christian/Escritorio/trabajos/dotnet/microServices/dotnet-products-api/ProductsAPI/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/christian/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/christian/Escritorio/trabajos/dotnet/microServices/dotnet-products-api/ProductsRepository/ProductsRepository.csproj": {
+                "projectPath": "/home/christian/Escritorio/trabajos/dotnet/microServices/dotnet-products-api/ProductsRepository/ProductsRepository.csproj"
+              },
+              "/home/christian/Escritorio/trabajos/dotnet/microServices/dotnet-products-api/ProductsServices/ProductsServices.csproj": {
+                "projectPath": "/home/christian/Escritorio/trabajos/dotnet/microServices/dotnet-products-api/ProductsServices/ProductsServices.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            },
+            "dapper": {
+              "target": "Package",
+              "version": "[2.1.28, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/christian/.dotnet/sdk/8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/christian/Escritorio/trabajos/dotnet/microServices/dotnet-products-api/ProductsModels/ProductsModels.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/christian/Escritorio/trabajos/dotnet/microServices/dotnet-products-api/ProductsModels/ProductsModels.csproj",
+        "projectName": "ProductsModels",
+        "projectPath": "/home/christian/Escritorio/trabajos/dotnet/microServices/dotnet-products-api/ProductsModels/ProductsModels.csproj",
+        "packagesPath": "/home/christian/.nuget/packages/",
+        "outputPath": "/home/christian/Escritorio/trabajos/dotnet/microServices/dotnet-products-api/ProductsModels/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/christian/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/christian/.dotnet/sdk/8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/christian/Escritorio/trabajos/dotnet/microServices/dotnet-products-api/ProductsRepository/ProductsRepository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/christian/Escritorio/trabajos/dotnet/microServices/dotnet-products-api/ProductsRepository/ProductsRepository.csproj",
+        "projectName": "ProductsRepository",
+        "projectPath": "/home/christian/Escritorio/trabajos/dotnet/microServices/dotnet-products-api/ProductsRepository/ProductsRepository.csproj",
+        "packagesPath": "/home/christian/.nuget/packages/",
+        "outputPath": "/home/christian/Escritorio/trabajos/dotnet/microServices/dotnet-products-api/ProductsRepository/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/christian/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/christian/Escritorio/trabajos/dotnet/microServices/dotnet-products-api/ProductsModels/ProductsModels.csproj": {
+                "projectPath": "/home/christian/Escritorio/trabajos/dotnet/microServices/dotnet-products-api/ProductsModels/ProductsModels.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/christian/.dotnet/sdk/8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/christian/Escritorio/trabajos/dotnet/microServices/dotnet-products-api/ProductsServices/ProductsServices.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/christian/Escritorio/trabajos/dotnet/microServices/dotnet-products-api/ProductsServices/ProductsServices.csproj",
+        "projectName": "ProductsServices",
+        "projectPath": "/home/christian/Escritorio/trabajos/dotnet/microServices/dotnet-products-api/ProductsServices/ProductsServices.csproj",
+        "packagesPath": "/home/christian/.nuget/packages/",
+        "outputPath": "/home/christian/Escritorio/trabajos/dotnet/microServices/dotnet-products-api/ProductsServices/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/christian/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/christian/Escritorio/trabajos/dotnet/microServices/dotnet-products-api/ProductsModels/ProductsModels.csproj": {
+                "projectPath": "/home/christian/Escritorio/trabajos/dotnet/microServices/dotnet-products-api/ProductsModels/ProductsModels.csproj"
+              },
+              "/home/christian/Escritorio/trabajos/dotnet/microServices/dotnet-products-api/ProductsRepository/ProductsRepository.csproj": {
+                "projectPath": "/home/christian/Escritorio/trabajos/dotnet/microServices/dotnet-products-api/ProductsRepository/ProductsRepository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/christian/.dotnet/sdk/8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
