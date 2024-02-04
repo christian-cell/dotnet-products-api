@@ -9,6 +9,7 @@ using ProductModels.Dtos;
 using ProductModels.Models;
 using ProductsAPI.Data;
 using ProductsAPI.Helpers;
+using Exception = System.Exception;
 
 namespace ProductsAPI.Controllers;
 
@@ -23,6 +24,7 @@ public class AuthController : ControllerBase
     private readonly AuthHelper _authelper;
     private readonly DataContextDapper _dapper;
     private readonly IConfiguration _config;
+    
 
     public AuthController(
         AuthHelper authelper,
@@ -42,7 +44,7 @@ public class AuthController : ControllerBase
         {
             if (userForRegistration.Password == userForRegistration.PasswordConfirm)
             {
-                string sqlCheckUserExists = "SELECT Email FROM DotnetProductsPractice.Auth WHERE Email = '" +
+                string sqlCheckUserExists = "SELECT Email FROM ProductsSchema.Auth WHERE Email = '" +
                     userForRegistration.Email + "'";
 
                 IEnumerable<string> existingUsers = _dapper.LoadData<string>(sqlCheckUserExists);
@@ -54,10 +56,10 @@ public class AuthController : ControllerBase
                         rng.GetNonZeroBytes(passwordSalt);
                     }
 
-                    byte[] passwordHash = GetPasswordHash(userForRegistration.Password, passwordSalt);
+                    byte[] passwordHash = _authelper.GetPasswordHash(userForRegistration.Password, passwordSalt);
 
                     string sqlAddAuth = @"
-                        INSERT INTO DotnetProductsPractice.Auth  ([Email],
+                        INSERT INTO ProductsSchema.Auth  ([Email],
                         [PasswordHash],
                         [PasswordSalt]) VALUES ('" + userForRegistration.Email +
                         "', @PasswordHash, @PasswordSalt)";
@@ -77,7 +79,7 @@ public class AuthController : ControllerBase
                     {
                         
                         string sqlAddUser = @"
-                            INSERT INTO DotnetProductsPractice.Users(
+                            INSERT INTO ProductsSchema.Users(
                                 [FirstName],
                                 [LastName],
                                 [Email],
@@ -106,69 +108,42 @@ public class AuthController : ControllerBase
     public IActionResult Login(UserForLoginDto userForLogin)
     {
 
-        
         string sqlForHashAndSalt = @"SELECT 
-                [PasswordHash],
-                [PasswordSalt] FROM DotnetProductsPractice.Auth WHERE Email = '" +
+            [PasswordSalt] , [PasswordHash] FROM ProductsSchema.Auth WHERE Email = '" +
                                    userForLogin.Email + "'";
 
-        UserForLoginConfirmationDto userForConfirmation = _dapper
-            .LoadDataSingle<UserForLoginConfirmationDto>(sqlForHashAndSalt);
+        UserForLoginConfirmationDto userForLoginConfirmation =
+            _dapper.LoadDataSingle<UserForLoginConfirmationDto>(sqlForHashAndSalt);
 
-        if (userForConfirmation != null)
+        if (userForLoginConfirmation != null)
         {
-            byte[] passwordHash = GetPasswordHash(userForLogin.Password, userForConfirmation.PasswordSalt);
+            byte[] passwordHash = _authelper.GetPasswordHash(userForLogin.Password, userForLoginConfirmation.PasswordSalt);
 
-
-            for (int index = 0; index < passwordHash.Length; index++)
+            for (int i = 0; i < passwordHash.Length; i++)
             {
-                if (passwordHash[index] != userForConfirmation.PasswordHash[index]){
-                    return StatusCode(401, "Incorrect password!");
+                if (passwordHash[i] != userForLoginConfirmation.PasswordHash[i])
+                {
+                    return StatusCode(401, "Password Incorrecto");
                 }
             }
 
             string userIdSql = @"
-                SELECT UserId FROM DotnetProductsPractice.Users WHERE Email = '" +
+               SELECT UserId FROM ProductsSchema.Users WHERE Email = '" +
                                userForLogin.Email + "'";
-
+            
             int userId = _dapper.LoadDataSingle<int>(userIdSql);
 
             return Ok(new Dictionary<string, string>
-            {
-                {"token" , _authelper.CreateToken(userId)}
-            }); 
+                {
+                    { "token", _authelper.CreateToken(userId) }
+                }
+            );
         }
         else
         {
-            throw new Exception("usuario no encontrado en base de datos");
+            throw new Exception("Usuario no encontrado en Auth");
         }
-
-        
     }
 
-    private byte[] GetPasswordHash(string password, byte[] passwordSalt)
-    {
-        string passwordSaltPlusString = _config.GetSection("AppSettings:PasswordKey").Value +
-                                        Convert.ToBase64String(passwordSalt);
-
-        return KeyDerivation.Pbkdf2(
-            password: password,
-            salt: Encoding.ASCII.GetBytes(passwordSaltPlusString),
-            prf: KeyDerivationPrf.HMACSHA256,
-            iterationCount: 1000000,
-            numBytesRequested: 256 / 8
-        );
-    }
     
-    [HttpGet("RefreshToken")]
-    public string RefreshToken()
-    {
-        string userIdSql = @"
-                SELECT UserId FROM DotnetProductsPractice.Users WHERE UserId = '" +
-                           User.FindFirst("userId")?.Value + "'";
-
-        int userId = _dapper.LoadDataSingle<int>(userIdSql);
-        return _authelper.CreateToken(userId);
-
-    }
 }

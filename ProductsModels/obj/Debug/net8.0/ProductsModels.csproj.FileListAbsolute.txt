@@ -21,3 +21,7 @@ C:/Users/ChristianGarciaMarti/Desktop/dotnet/api/dotnet8-products-api/ProductsAP
 /home/christian/Escritorio/trabajos/dotnet/microServices/dotnet-products-api/ProductsModels/obj/Debug/net8.0/refint/ProductsModels.dll
 /home/christian/Escritorio/trabajos/dotnet/microServices/dotnet-products-api/ProductsModels/obj/Debug/net8.0/ProductsModels.pdb
 /home/christian/Escritorio/trabajos/dotnet/microServices/dotnet-products-api/ProductsModels/obj/Debug/net8.0/ref/ProductsModels.dll
+/home/christian/Escritorio/trabajos/dotnet/microServices/dotnet-products-api/ProductsModels/bin/Debug/net8.0/Microsoft.Extensions.Logging.Abstractions.dll
+/home/christian/Escritorio/trabajos/dotnet/microServices/dotnet-products-api/ProductsModels/bin/Debug/net8.0/Microsoft.Extensions.Logging.Abstractions.xml
+/home/christian/Escritorio/trabajos/dotnet/microServices/dotnet-products-api/ProductsModels/obj/Debug/net8.0/ProductsModels.csproj.AssemblyReference.cache
+/home/christian/Escritorio/trabajos/dotnet/microServices/dotnet-products-api/ProductsModels/obj/Debug/net8.0/ProductsModels.csproj.CopyComplete

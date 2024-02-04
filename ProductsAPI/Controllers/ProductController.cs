@@ -6,7 +6,7 @@ using ProductsServices.Abstractions;
 
 namespace ProductsAPI.Controllers;
 
-[Authorize]
+
 [ApiController]
 [Route("[controller]")]
 
@@ -20,6 +20,7 @@ public class ProductController : ControllerBase
         _productService = productService;
     }
 
+    // [Authorize]
     [HttpGet("GetProducts")]
     public async Task<ActionResult<IEnumerable<Product>>> GetAllProducts()
     {

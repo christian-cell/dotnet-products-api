@@ -289,3 +289,5 @@ C:/Users/ChristianGarciaMarti/Desktop/dotnet/api/dotnet8-products-api/ProductsAP
 /home/christian/Escritorio/trabajos/dotnet/microServices/dotnet-products-api/ProductsAPI/obj/Debug/net8.0/ProductsAPI.pdb
 /home/christian/Escritorio/trabajos/dotnet/microServices/dotnet-products-api/ProductsAPI/obj/Debug/net8.0/ProductsAPI.genruntimeconfig.cache
 /home/christian/Escritorio/trabajos/dotnet/microServices/dotnet-products-api/ProductsAPI/obj/Debug/net8.0/ref/ProductsAPI.dll
+/home/christian/Escritorio/trabajos/dotnet/microServices/dotnet-products-api/ProductsAPI/bin/Debug/net8.0/ProductsDomain.dll
+/home/christian/Escritorio/trabajos/dotnet/microServices/dotnet-products-api/ProductsAPI/bin/Debug/net8.0/ProductsDomain.pdb

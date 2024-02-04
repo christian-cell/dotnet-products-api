@@ -13,7 +13,7 @@ public class ProductDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Product>().ToTable("Products", "DotnetProductsPractice");
+        modelBuilder.Entity<Product>().ToTable("Products", "ProductsSchema");
         base.OnModelCreating(modelBuilder);
     }
 }

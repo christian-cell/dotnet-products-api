@@ -33,3 +33,5 @@ C:/Users/ChristianGarciaMarti/Desktop/dotnet/api/dotnet8-products-api/ProductsAP
 /home/christian/Escritorio/trabajos/dotnet/microServices/dotnet-products-api/ProductsServices/obj/Debug/net8.0/refint/ProductsServices.dll
 /home/christian/Escritorio/trabajos/dotnet/microServices/dotnet-products-api/ProductsServices/obj/Debug/net8.0/ProductsServices.pdb
 /home/christian/Escritorio/trabajos/dotnet/microServices/dotnet-products-api/ProductsServices/obj/Debug/net8.0/ref/ProductsServices.dll
+/home/christian/Escritorio/trabajos/dotnet/microServices/dotnet-products-api/ProductsServices/bin/Debug/net8.0/ProductsDomain.dll
+/home/christian/Escritorio/trabajos/dotnet/microServices/dotnet-products-api/ProductsServices/bin/Debug/net8.0/ProductsDomain.pdb

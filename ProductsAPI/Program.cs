@@ -1,9 +1,9 @@
 using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using ProductsAPI.Helpers;
+using ProductsAPI.Middlewares;
 using ProductsRepository.Abstractions;
 using ProductsRepository.Implemetations;
 using ProductsServices.Abstractions;
@@ -69,6 +69,8 @@ namespace ProductsAPI
             app.UseAuthorization();
 
             app.MapControllers();
+
+            app.UseMiddleware<ExceptionMiddleware>();
 
             app.Run();
         }

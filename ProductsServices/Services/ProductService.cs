@@ -1,4 +1,5 @@
 using ProductModels.Models;
+using ProductsModels.Exceptions;
 using ProductsRepository.Abstractions;
 using ProductsServices.Abstractions;
 
